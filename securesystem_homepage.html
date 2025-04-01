@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="secure.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="secure_responsive.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <main class="main_header" id="main_home">
+        <div class="first_two_container">
+            <div class="site_name">Digital defender</div>
+            <div id="main_side_btn">
+                <button class="openbtn" onclick="openNav()">☰ ALL</button>
+            </div>
+        </div>
+        <div class="right_search_pro">
+            <div class="search_bar">
+                <span> <i class="fa-solid fa-magnifying-glass search_icon"></i></span>
+                <input placeholder="Search For Services" name="" class="search_inp">
+            </div>
+            <div class="action_container">
+                <span><i class="fa-regular fa-user action_icon"></i></span>
+                <span class="action_name"> <a href="./form.html">SIGN UP </a></span>
+            </div>
+        </div>
+        
+    </main>
+    <div id="mySidebar" class="sidebar">
+        <i class="fa-solid fa-xmark closebtn" onclick="closeNav()"></i>
+        <div class="trend_section">
+            <h2>Home</h2>
+            <a href="#" onclick="scrollToSection(event, 'network-security')">Network Security</a>
+            <a href="#" onclick="scrollToSection(event, 'cloud-security')">Cloud Security</a>
+            <a href="#" onclick="scrollToSection(event, 'application-security')">Application Security</a>
+            <a href="#" onclick="scrollToSection(event, 'data-security')">Data Security</a>
+        </div>
+        <br>
+        <hr>
+    </div>
+    <section class="first_page">
+        <div class="first_container" onclick="main_container2()">
+            <div class="img_con">
+                <div class="tag_line">
+                    <h1>
+                        security starts with
+                    </h1>
+                    <h1>
+                        digital defenders </h1>
+                    <h3>Data is the heart of your digital life; keep it beating.</h3>
+                </div>
+                <img src=".//image/frontpge.jpeg" alt="img" class="img_pic">
+            </div>
+        </div>
+    </section>
+
+    <header class="main_header_2">
+        <nav class="nav_bar">
+            <a href="#data-security" onclick="scrollToSection(event, 'data-security')" class="btn_1 ">Data Security</a>
+            <a href="#network-security" onclick="scrollToSection(event, 'network-security')" class="btn_1 ">Network
+                Security</a>
+            <a href="#cloud-security" onclick="scrollToSection(event, 'cloud-security')" class="btn_1 ">Cloud
+                Security</a>
+            <a href="#application-security" onclick="scrollToSection(event, 'application-security')"
+                class="btn_1 ">Application
+                Security</a>
+            <!-- <a href="#">overview</a> -->
+        </nav>
+    </header>
+
+    <section class="data_security section" id="data-security" onclick= "main_container2()">
+        <div class="data_img_page">
+            <div class="info_data">
+                <h3 class="line_info">In today’s digital world, protecting sensitive information is more critical than
+                    ever.</h3>
+            </div>
+            <div class="container_data">
+                <div class="imgdata">
+                    <ul class="imglist_data ">
+                        <li class="img-data-item ">
+                            <a href="https://blogs.opentext.com/fortifying-your-digital-fortress/"
+                                class="img-link-data">
+                                <img src=".//image/data1.webp" alt="" class="data-img">
+                                <p class="badge">Digital Fortress</p>
+                                <h2 class="img-title-data first_data_con"> Fortify Your Digital World with Advanced Data Security</h2>
+                                <button class="img-btn material-symbols-outlined">arrow_forward</button>
+                            </a>
+                        </li>
+                        <li class="img-data-item ">
+                            <a href="https://blog.comsourceny.com/data-protection" class="img-link-data">
+                                <img src=".//image/data_2.jpeg" alt="" class="data-img">
+                                <p class="badge ">Cyber Shield</p>
+                                <h2 class="img-title-data"> Secure Your Data, Protect Your Future</h2>
+                                <button class="img-btn material-symbols-outlined">arrow_forward</button>
+                            </a>
+                        </li>
+                        <li class="img-data-item ">
+                            <a href="https://blog.lumen.com/empowering-digital-transformation-part-4-secure-your-future-with-a-sound-cloud-and-edge-data-protection-strategy/"
+                                class="img-link-data">
+                                <img src=".//image/data3.jpg" alt="" class="data-img">
+                                <p class="badge ">Cyber Guardian</p>
+                                <h2 class="img-title-data"> Empowering Secure Digital Connectivity</h2>
+                                <button class="img-btn material-symbols-outlined">arrow_forward</button>
+                            </a>
+                        </li>
+                        <li class="img-data-item ">
+                            <a href="https://www.cm-alliance.com/cybersecurity-blog/future-of-cybersecurity-trends-predictions-for-a-safe-digital-world"
+                                class="img-link-data">
+                                <img src=".//image/data4.jpg" alt="" class="data-img">
+                                <p class="badge ">Data Shield</p>
+                                <h2 class="img-title-data"> Fortifying Digital Security for a Safer Future</h2>
+                                <button class="img-btn material-symbols-outlined">arrow_forward</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <img src="./image/data-security.png" class="img_data" alt="">
+        </div>
+    </section>
+
+    <section id="network-security" class="network_sec section" onclick="main_container2()">
+        <div class="net_descrip">
+            <h1 class="net_tagline">Protecting Your Digital World – Secure, Reliable, and Future-Ready Cybersecurity
+                Solutions</h1>
+        </div>
+        <div class="pic_des">
+            <div class="container_1">
+                <a href="https://futurense.com/uni-blog/cybersecurity-protecting-your-digital-world">
+                    <h3 class="h3_net"> Protecting Your Digital World</h3>
+                    <p>Secure your networks with the latest cybersecurity solutions. Stay safe from cyber threats,
+                        hacking,
+                        and
+                        malware.</p>
+                    <div class="imgnet1 img_1"> <img src=".//image/securenet.png" alt="AI Cybersecurity Image"
+                            class="img33" id="img_1">
+                    </div>
+                </a>
+            </div>
+
+            <div class="container_1">
+                <a
+                    href="https://www.eccu.edu/blog/the-rise-of-cybersecurity-threats-in-smart-cities-guide-and-prevention/">
+                    <h3 class="h3_net">Securing Smart Cities: The Future of Network Protection</h3>
+                    <p>Network security is the backbone of smart cities, ensuring data protection, secure communication,
+                        and
+                        defense against cyber threats.</p>
+                    <div class="imgnet1"> <img src=".//image/smart-city.jpg" alt="AI Cybersecurity Image" class="img33"
+                            id="img_2">
+                    </div>
+                </a>
+            </div>
+            <div class="container_1">
+                <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online">
+                    <h3 class="h3_net">Stay Secure Online: Protecting Your Digital World</h3>
+                    <p>Network security is essential for a safer internet. Safeguard your data, prevent cyber threats,
+                        and
+                        ensure secure connections in an increasingly digital world.</p>
+                    <div class="imgnet1"> <img src=".//image/10281143.jpg" alt="AI Cybersecurity Image" class="img33"
+                            id="img_3">
+                    </div>
+                </a>
+            </div>
+            <div class="container_1">
+                <a
+                    href="https://www.linkedin.com/pulse/network-security-trends-fortifying-digital-frontier-de-oliveira-lpc9e/">
+                    <h3 class="h3_net">Fortifying Digital Frontiers: Secure Your Network Today</h3>
+                    <p>Network security is the key to protecting sensitive information and ensuring safe digital
+                        interactions. Stay ahead of cyber threats with advanced security solutions.</p>
+                    <div class="imgnet1"> <img src=".//image/netwrkk.jpg" alt="AI Cybersecurity Image" class="img33"
+                            id="img_4">
+                    </div>
+                </a>
+            </div>
+            <div class="container_1">
+                <a
+                    href="https://www.siemens.com/global/en/products/buildings/services/cybersecurity-services-buildings.html?gclid=Cj0KCQjw-e6-BhDmARIsAOxxlxXg4CFXRIUMSG59K9O5qP68D_dNJ3Z3KFsV_hW117ecxQLstCZiwhsaAqoDEALw_wcB&gad_source=1">
+                    <h3 class="h3_net">Securing the Digital World: Protecting Networks, Safeguarding Data</h3>
+                    <p>In an interconnected world, network security is essential for safeguarding sensitive data,
+                        ensuring
+                        safe transactions, and preventing cyber threats. Stay secure, stay ahead!.</p>
+                    <div class="imgnet1"> <img src=".//image/internet-onl.jpeg" alt="AI Cybersecurity Image"
+                            class="img33" id="img_5">
+                    </div>
+                </a>
+            </div>
+            <div class="container_1">
+                <a href="https://www.securekonnect.com/network-security-safeguarding-your-digital-infrastructure/">
+                    <h3 class="h3_net">Network Security: Safeguarding Digital Connections</h3>
+                    <p>Protecting networks from cyber threats is vital in the digital age. Strong security measures
+                        ensure
+                        safe communication, secure transactions, and data integrity.</p>
+                    <div class="imgnet1"> <img src=".//image/Network-Security-4.png" alt="AI Cybersecurity Image"
+                            class="img33" id="img_6">
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="cloud-security" class="cloud_security section" onclick="main_container2()">
+        <div class="cloud_descrip">
+            <h1 class="cloud_tagline">Cloud Security: Protecting Your Data in the Digital Sky</h1>
+        </div>
+        <div class="container_clu swiper">
+            <div class="imgscroll">
+                <ul class="imglist swiper-wrapper">
+                    <li class="img-item swiper-slide">
+                        <a href="https://blog.emb.global/privacy-in-iot/" class="img-link">
+
+                            <img src=".//image/cloud1.png" alt="" class="cloud-img">
+
+                            <p class="badge cloud">cloud security</p>
+                            <h2 class="img-title"> Safeguarding Your Data in a Connected World</h2>
+                            <button class="img-btn material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="img-item swiper-slide">
+                        <a href="https://digitdefence.com/blog/how-data-security-in-cloud-computing-keeps-you-safe"
+                            class="img-link">
+                            <img src=".//image/cloud2.jpeg" alt="" class="cloud-img">
+                            <p class="badge cloud1">Secure Cloud Computing – </p>
+                            <h2 class="img-title"> Discover how cloud security ensures the safety of your data with
+                                encryption, authentication, and global connectivity. </h2>
+                            <button class="img-btn material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="img-item swiper-slide">
+                        <a href="https://sprinto.com/blog/cloud-vulnerabilities/" class="img-link">
+                            <img src="./cloud/cyber-security-8819383_640.jpg" alt="" class="cloud-img">
+                            <p class="badge cloud2">Cloud Security Risks – </p>
+                            <h2 class="img-title">Explore the potential vulnerabilities of cloud storage and data
+                                protection.</h2>
+                            <button class="img-btn material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="img-item swiper-slide">
+                        <a href="https://www.hashstudioz.com/blog/why-data-visualization-is-key-to-business-insights/"
+                            class="img-link">
+                            <img src=".//cloud/graph-3033203_640.webp" alt="" class="cloud-img">
+                            <p class="badge cloud3">Data Analytics & Trends – </p>
+                            <h2 class="img-title"> Explore how data visualization helps in understanding trends,
+                                patterns, and business insights.</h2>
+                            <button class="img-btn material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="img-item swiper-slide">
+                        <a href="https://sambodhi.co.in/pie-chart-a-revolutionizing-data-visualization-tool/"
+                            class="img-link">
+                            <img src=".//cloud/pie-chart-149727_640.webp" alt="" class="cloud-img">
+                            <p class="badge cloud4">Understanding Data Through Pie Charts – </p>
+                            <h2 class="img-title">Pie charts offer a simple yet effective way to represent data
+                                distribution and proportions</h2>
+                            <button class="img-btn material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="img-item swiper-slide">
+                        <a href="https://www.upguard.com/blog/cybersecurity-important" class="img-link">
+                            <img src="./cloud/cyber-security-1805632_640.webp" alt="" class="cloud-img">
+                            <p class="badge cloud5">Protecting Digital Assets in a Connected World</p>
+                            <h2 class="img-title"> Cybersecurity is essential in safeguarding sensitive information from
+                                cyber threats like hacking, malware, and data breaches</h2>
+                            <button class="img-btn material-symbols-outlined">arrow_forward</button>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="application-security" class="application_con section" onclick="main_container2()">
+        <header class="bg-secondary-bg text-white text-center py-5">
+            <h1>Advanced Application Security – Protect Your
+                Software from Vulnerabilities.</h1>
+            <p>Secure Your Applications – Prevent Breaches & Strengthen
+                Devenses.</p>
+            <p class="fw-bold text-start text-center">Description: - Modern applications face constant security threats,
+                including SQL injection, cross-site scripting (XSS), and data breaches. Our
+                application security services detect vulnerabilities, prevent exploits, and
+                safeguard your business-critical applications with secure coding practices, real
+                time monitoring, and penetration testing. </p>
+        </header>
+
+        <section id="features" class="container py-5 ">
+            <h2 class="text-center">Key Features</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h4>Web Application Firewall (WAF)</h4>
+                    <p>Blocks malicious traffic and prevents common attacks.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Vulnerability Assessment</h4>
+                    <p>Identifies security gaps and vulnerabilities.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>API Security</h4>
+                    <p>Protects API endpoints from unauthorized access and abuse.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>Application Threat Monitoring</h4>
+                    <p>Continuous monitoring to detect
+                        suspicious activities.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>Secure Code Review</h4>
+                    <p>Analyses source code for security flaws. </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="bg-secondary-bg py-5">
+            <div class="container text-white">
+                <h2 class="text-center">Benefits of Application Security</h2>
+                <ul>
+                    <li>Prevents Data Breaches</li>
+                    <li>Enhanced Application Performance</li>
+                    <li>Regulatory Compliance (GDPR, PCI DSS, HIPAA)</li>
+                    <li>Reduced Downtime</li>
+                    <li>Improved Customer Trust</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="trends" class="container py-5">
+            <h2 class="text-center">Latest Trends (2025)</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h4>DevSecOps Integration</h4>
+                    <p>Embedding security into the software development lifecycle.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>AI-Powered Threat Detection</h4>
+                    <p>Uses machine learning to detect anomalies.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Zero Trust Access</h4>
+                    <p>Ensures only verified users can access critical applications.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+
+
+
+    <footer id="footer_main">
+        <div id="all_sec">
+            <ul class="com_ul">
+                <h4 class="com_txt"><a href="#" class="a_tag">Digital Defenders </a></h4>
+                <li class="com_li" onclick="scrollToSection(event, 'main_home')"><a href="#section" class="a_tag">Home
+                    </a></li>
+                <li class="com_li" onclick="scrollToSection(event, 'network-security')"><a href="#sec"
+                        class="a_tag">Network Security</a></li>
+                <li class="com_li" onclick="scrollToSection(event, 'cloud-security')"><a href="#" class="a_tag">Cloud
+                        Security</a></li>
+                <li class="com_li" onclick="scrollToSection(event, 'application-security')"><a href="#"
+                        class="a_tag">Application Security</a></li>
+                <li class="com_li" onclick="scrollToSection(event, 'data-security')"><a href="#" class="a_tag">Data
+                        Security</a></li>
+            </ul>
+
+            <ul class="com_ul_4">
+                <h4 class="com_txt"><a href="#" class="a_tag">Contact Us</a></h4>
+                <li class="com_li_4"><a href="#" class="a_tag">Email</a></li>
+                <li><a href="#" class="a_tag">Facebook</a></li>
+                <li><a href="#" class="a_tag">Twitter</a></li>
+
+            </ul>
+
+            <div class="sub_2">
+                <h2 class="sub_txt">Subscribe</h2>
+                <input type="email" placeholder="Enter Your Email" id="email_sec">
+                <input type="submit" value="Subscribe" class="email_btn">
+            </div>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-snapchat"></i>
+                <i class="fa-brands fa-youtube"></i>
+
+            </div>
+        </div>
+
+        <div id="copy_rights">
+            <h4 class="txt_copy">Copyright @ 2025 <span>All rights reserved</span> </h4>
+            <div id="pri_term">
+                <h4>privacy policy</h4>
+                <h4>Term & condition</h4>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="secure.js"></script>
+</body>
+
+</html>

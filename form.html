@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        /* background-color: #004093; */
+        font-family: Arial, sans-serif;
+    }
+
+    form {
+        width: 400px;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 10px rgb(115, 141, 163);
+    }
+
+    label {
+        display: block;
+        margin-top: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    span {
+        color: red;
+    }
+
+    .image {
+        height: 110vh;
+        width: 100%;
+        background-image: url(./image/loginpageimg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.7;
+        position: absolute;
+    }
+</style>
+
+<body>
+    <div class="image"></div>
+    <form id="registrationForm">
+        <label for="fname">First Name: <span>*</span></label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <span id="fnalert"></span><br>
+        <!-- <span id="limalert"></span> -->
+        <label for="lname">Last Name: <span>*</span></label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <span id="lastalert"></span>
+        <!-- <span id="lastlimalert"></span> -->
+        <label for="email">Email: <span>*</span></label><br>
+        <input type="email" id="email" name="email"><br>
+        <span id="emailalert"></span>
+        <label for="">Phone Number: <span>*</span></label><br>
+        <input type="text" id="phnumber" name="phonenumber"><br>
+        <span id="phalert"></span>
+        <label for="pwd">Password: <span>*</span></label><br>
+        <input type="password" id="pwd" name="pwd"><br>
+        <span id="PSalert"></span>
+        <label for="cpwd">Confirm Password: <span>*</span></label><br>
+        <input type="password" id="cpwd" name="cpwd"><br>
+        <span id="re-filalert"></span>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="infoContainer"></div>
+
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var fname = document.getElementById('fname').value;
+            // console.log(fname);
+            // console.log(typeof(Number(fname)));
+            var lname = document.getElementById('lname').value;
+            var phnum = document.getElementById('phnumber').value;
+            var email = document.getElementById('email').value;
+            var pwd = document.getElementById('pwd').value;
+            var cpwd = document.getElementById('cpwd').value;
+            var num = /^[0-9]*$/;
+            // document.getElementById('fname').value= "";
+
+            if (fname == " ") {
+                document.getElementById("fnalert").innerText = "Please insert your first name!!";
+            }
+            else if (fname.length >= 10) {
+                document.getElementById("fnalert").innerText = "First name character limit is 10!!";
+            }
+            else if (fname.match(num)) {
+                document.getElementById("fnalert").innerText = "First name characters allow only in alphabatic!! ";
+            }
+
+            if (lname == "") {
+                document.getElementById("lastalert").innerText = "Please insert your last name!!";
+            }
+            else if (lname.length > 10) {
+                document.getElementById("lastalert").innerText = "Last name character limit is 10!!";
+            }
+            else if (lname.match(num)) {
+                document.getElementById("lastalert").innerText = "Last name characters allow only in alphabatic";
+            }
+            if (phnum == "") {
+                document.getElementById("phalert").innerText = "Please insert your Phone Number!!!";
+            }
+            else if (phnum.length > 10) {
+                document.getElementById("phalert").innerText = "Your Phone Number must be 10 number digits!!!";
+            }
+            else if (phnum.match(num) == false) {
+                document.getElementById("phalert").innerText = "Your Phone Number must be in numerical value!!"
+            }
+
+            if (email == "") {
+                document.getElementById("emailalert").innerText = "Please insert your Email!!";
+            }
+            else {
+
+            }
+
+            if (pwd == "") {
+                document.getElementById("PSalert").innerText = "Please enter your password";
+            }
+            if (cpwd == "") {
+                document.getElementById("re-filalert").innerText = "Please re-enter your password";
+            }
+            else if (pwd !== cpwd) {
+                alert('Passwords do not match');
+                return;
+            }
+
+            if (fname !== "" && lname !== "" && pwd !== "" && cpwd !== "") {
+                var submit = confirm("can please check your data is correct or not");
+                if (submit == true) {
+                    var infoContainer =alert("You Are Login Successfully");
+                    infoContainer.innerHTML = `
+                    <p>First Name: ${fname}</p>
+                    <p>Last Name: ${lname}</p>
+                    <p>Phone Numnber: ${phnum}</p>
+                    <p>Email: ${email}</p>
+                     `;
+                }
+                else {
+                    document.getElementById('fname').value = "";
+                    document.getElementById('lname').value = "";
+                    document.getElementById('phnumber').value = "";
+                    document.getElementById('email').value = "";
+                    document.getElementById('pwd').value = "";
+                    document.getElementById('cpwd').value = "";
+                }
+            }
+            if (submit == true) {
+                document.getElementById('fname').value = "";
+                document.getElementById('lname').value = "";
+                document.getElementById('phnumber').value = "";
+                document.getElementById('email').value = "";
+                document.getElementById('pwd').value = "";
+                document.getElementById('cpwd').value = "";
+            }
+        });
+    </script>
+</body>
+
+</html>
